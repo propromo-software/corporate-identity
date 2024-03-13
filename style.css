@@ -1,0 +1,33 @@
+@import url('https://api.fonts.coollabs.io/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Koulen&display=swap'); /* no ü, ö, ä, ß... */
+@import url('https://api.fonts.coollabs.io/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* privacy friendly fonts: fonts.googleapis.com => api.fonts.coollabs.io */
+
+.figtree-font {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; /* 300 to 900 */
+  font-style: normal;
+}
+
+.koulen-font {
+    font-family: "Koulen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.source-sans-3-font {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* 200 to 900 */
+  font-style: normal;
+}
+
+.system-ui-font {
+    --system-ui-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--system-ui-font);
+}
+
+body {
+    font-family: var(--system-ui-font);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.10/src/index.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicons/favicon.png" type="image/png">
+    <title>Propromo | Corporate Identity</title>
+</head>
+
+<body class="prose">
+    <main class="flex flex-col items-center justify-center min-h-screen mt-8">
+        <h1 class="koulen-font text-8xl">koulen-font</h1>
+        <h2 class="m-4 text-5xl figtree-font">figtree-font</h2>
+        <button type="button" class="uppercase px-4 py-2 text-lg text-white font-semibold bg-[#0D3269] rounded-md shadow-md source-sans-3-font focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">source-sans-3-font</button>
+        <p class="m-4 text-base system-ui-font">system-ui-font</p>
+
+        <section class="mt-4">
+            <h2 class="text-3xl text-center">Colors</h2>
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="m-4 w-20 h-20 bg-[#0D3269] rounded-full" onclick="copyColor('#0D3269')"></div>
+                <div class="m-4 w-20 h-20 bg-[#9A9A9A] rounded-full" onclick="copyColor('#9A9A9A')"></div>
+                <div class="m-4 w-20 h-20 bg-[#CCCCCC] rounded-full" onclick="copyColor('#CCCCCC')"></div>
+                <div class="m-4 w-20 h-20 bg-[#DCDCDC] rounded-full" onclick="copyColor('#DCDCDC')"></div>
+                <div class="m-4 w-20 h-20 bg-[#229342] rounded-full" onclick="copyColor('#229342')"></div>
+                <div class="m-4 w-20 h-20 bg-[#FBC116] rounded-full" onclick="copyColor('#FBC116')"></div>
+                <div class="m-4 w-20 h-20 bg-[#E33B2E] rounded-full" onclick="copyColor('#E33B2E')"></div>                
+            </div>
+            <div class="flex flex-col items-center">
+                Yale Blue, Battleship Grey, Silver & Platinum
+                <a class="underline hover:no-underline" target="_blank" href="https://coolors.co/0d3269-9a9a9a-cccccc-dcdcdc">coolors.co</a>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-[#00000033]">
+        <p class="p-4 text-center">© 
+        <span id="currentYearPlaceholder">
+            <script>
+              document.getElementById('currentYearPlaceholder').textContent = new Date().getFullYear();
+            </script>
+        </span> <a class="hover:underline" target="_blank" href="https://propromo.duckdns.org">Propromo</a>
+        </p>
+    </footer>
+
+    <script>
+        function copyColor(color) {
+          const textarea = document.createElement('textarea');
+          textarea.value = color;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          alert('Color copied to clipboard: ' + color);
+        }
+    </script>
+</body>
+</html>
